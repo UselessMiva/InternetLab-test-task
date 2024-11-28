@@ -1,3 +1,3 @@
 # InternetLab-test-task
 Тестовое задание 
-Ссылка на GitHubPages: uselessmiva.github.io/InternetLab-test-task/
+Ссылка на [GitHub Pages](https://uselessmiva.github.io/InternetLab-test-task/)
