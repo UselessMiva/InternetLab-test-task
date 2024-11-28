@@ -1,12 +1,18 @@
 <section id="orderForm" class="orderForm">
   <h3 class="heading">Отправь форму</h3>
-  <form class="orderForm__form" novalidate>
+  <form
+    class="orderForm__form"
+    [formGroup]="orderForm"
+    (ngSubmit)="onSubmit($event)"
+    novalidate
+  >
     <div class="orderForm__container">
       <input
         id="name"
         class="orderForm__input"
         type="text"
         placeholder="Имя"
+        formControlName="name"
         minlength="2"
       />
       <span class="form__error">Минимальная длина имени 2 символа</span>
@@ -18,6 +24,7 @@
         class="orderForm__input"
         type="tel"
         placeholder="Телефон"
+        formControlName="tel"
         pattern="[789][0-9]{10}"
       />
       <span class="form__error"
@@ -27,10 +34,12 @@
     </div>
     <label class="orderForm__check">
       <p class="orderForm__check-input-text">Согласен, отказываюсь</p>
-      <input type="checkbox" class="orderForm__check-input" />
+      <input
+        type="checkbox"
+        class="orderForm__check-input"
+        formControlName="consent"
+      />
     </label>
-    <button class="orderForm__check-button" type="submit" (click)="onSubmit()">
-      Отправить
-    </button>
+    <button class="orderForm__check-button" type="submit">Отправить</button>
   </form>
 </section>

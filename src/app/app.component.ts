@@ -8,6 +8,7 @@ import { FaqComponent } from './faq/faq.component';
 import { InfoComponent } from './info/info.component';
 import { FormBlockComponent } from './formBlock/formBlock.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   imports: [
@@ -20,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     InfoComponent,
     FormBlockComponent,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

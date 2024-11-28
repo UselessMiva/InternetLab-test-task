@@ -9,6 +9,8 @@ import {
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-formBlock',
@@ -26,7 +28,11 @@ import { MatInputModule } from '@angular/material/input';
 export class FormBlockComponent {
   orderForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient,
+    private snackBar: MatSnackBar
+  ) {
     this.orderForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       tel: ['', [Validators.required, Validators.pattern('^[789][0-9]{10}$')]],
@@ -34,10 +40,30 @@ export class FormBlockComponent {
     });
   }
 
-  onSubmit(): void {
+  onSubmit(event: Event): void {
+    event.preventDefault();
     if (this.orderForm.valid) {
       const formData = this.orderForm.value;
-      console.log('Submitted Data:', formData);
+      console.log(formData);
+      this.http
+        .post('https://jsonplaceholder.typicode.com/posts', formData)
+        .subscribe({
+          next: (response) => {
+            this.snackBar.open('Форма успешно отправлена!', 'Закрыть', {
+              duration: 3000,
+            });
+            this.orderForm.reset();
+          },
+          error: (error) => {
+            this.snackBar.open('Ошибка при отправке формы!', 'Закрыть', {
+              duration: 3000,
+            });
+          },
+        });
+    } else {
+      this.snackBar.open('Форма заполнена некорректно!', 'Закрыть', {
+        duration: 3000,
+      });
     }
   }
 }
