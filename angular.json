@@ -13,8 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "/test-lab-internet/",
-            "outputPath": "dist/test-lab-internet",
+            "baseHref": "/InternetLab-test-task/",
+            "outputPath": "dist/InternetLab-test-task",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [

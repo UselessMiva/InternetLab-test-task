@@ -69,7 +69,6 @@
   color: var(--primary);
 }
 
-/* Контент details */
 .details__content {
   z-index: 0;
   color: var(--dark-gray);
@@ -80,7 +79,6 @@
   line-height: 28px;
 }
 
-/* Адаптивные стили */
 @media screen and (max-width: 768px) {
   .faq {
     padding: 20px;
