@@ -1,0 +1,14 @@
+<section class="infoService">
+  <div class="infoService__info">
+    <div class="infoService__content" *ngFor="let info of infoList">
+      <h3 class="infoService__title">{{ title }}</h3>
+      <p class="infoService__description">{{ info.description }}</p>
+    </div>
+  </div>
+  <div class="infoService__info infoService__info_reverse">
+    <div class="infoService__content" *ngFor="let info of infoList">
+      <h3 class="infoService__title">{{ title }}</h3>
+      <p class="infoService__description">{{ info.description }}</p>
+    </div>
+  </div>
+</section>

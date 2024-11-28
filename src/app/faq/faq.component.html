@@ -1,0 +1,16 @@
+<section class="faq" id="faq">
+  <h2 class="heading">Вопросы и ответы</h2>
+  <div class="faq__content">
+    <div class="faq__info" *ngFor="let item of dataFAQ">
+      <details class="details" key="{item.id}">
+        <summary class="details__title-container">
+          <p class="details__title">{{ item.title }}</p>
+          <button class="details__button">
+            <img src="assets/images/openDropDown.svg" alt="" />
+          </button>
+        </summary>
+        <div class="details__content">{{ item.description }}</div>
+      </details>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,125 @@
+@import url(./assets/fonts/fonts.css);
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+address {
+  font-style: normal;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+.root {
+  font-family: "GraphikLCG", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 56px;
+  margin: 0;
+  text-align: center;
+}
+@media screen and (max-width: 375px) {
+  .heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+:root {
+  --black: #191c1f;
+  --dark-gray: #5e646a;
+  --gray: #83898f;
+  --mid-gray: #c2c8cd;
+  --light-gray: #eceff2;
+  --extralight-gray: #f6f8fa;
+  --white: #ffffff;
+  --dangerous: #f13636;
+  --succes: #25cd82;
+  --primary-disabled: #abcae6;
+  --primary: #2a6cea;
+  --primary-hover: #397dff;
+  --blur: 10px;
+  --font-weight-bold: 600;
+  --font-weight-normal: 400;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

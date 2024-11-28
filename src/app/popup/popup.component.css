@@ -1,0 +1,93 @@
+.popup {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background-color: var(--white);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.popup_opened {
+  display: block;
+}
+
+.popup__container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__logo {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray);
+}
+
+.popup__logo svg {
+  flex-shrink: 0;
+}
+
+.popup__logo-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black);
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.popup__buttonClose {
+  background-size: contain;
+  width: 22px;
+  height: 22px;
+  border: none;
+  cursor: pointer;
+  right: 0;
+  padding: 0;
+}
+
+.popup__buttonClosePart {
+  background: url("../../assets/images/burger-menu-close-button-part-2.svg")
+    no-repeat center center;
+  width: 18px;
+  height: 18px;
+}
+
+.popup__navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray);
+  position: relative;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid;
+}
+
+.popup__link:hover {
+  background-color: var(--light-gray);
+  color: var(--black);
+}
+
+.popup__link-text {
+  flex-grow: 1;
+}
+
+.popup__link-icon {
+  width: 24px;
+  height: 24px;
+}

@@ -1,0 +1,36 @@
+<section id="orderForm" class="orderForm">
+  <h3 class="heading">Отправь форму</h3>
+  <form class="orderForm__form" novalidate>
+    <div class="orderForm__container">
+      <input
+        id="name"
+        class="orderForm__input"
+        type="text"
+        placeholder="Имя"
+        minlength="2"
+      />
+      <span class="form__error">Минимальная длина имени 2 символа</span>
+      <label for="name" class="orderForm__label">Имя</label>
+    </div>
+    <div class="orderForm__container">
+      <input
+        id="phone"
+        class="orderForm__input"
+        type="tel"
+        placeholder="Телефон"
+        pattern="[789][0-9]{10}"
+      />
+      <span class="form__error"
+        >Это поле должно содержать телефон в формате 71234567890</span
+      >
+      <label for="phone" class="orderForm__label">Телефон</label>
+    </div>
+    <label class="orderForm__check">
+      <p class="orderForm__check-input-text">Согласен, отказываюсь</p>
+      <input type="checkbox" class="orderForm__check-input" />
+    </label>
+    <button class="orderForm__check-button" type="submit" (click)="onSubmit()">
+      Отправить
+    </button>
+  </form>
+</section>

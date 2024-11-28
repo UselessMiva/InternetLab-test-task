@@ -1,0 +1,200 @@
+.orderForm {
+  display: flex;
+  flex-direction: column;
+  margin: 80px 560px;
+}
+
+.orderForm__form {
+  display: grid;
+  grid-template-columns: repeat(2, 384px);
+  gap: 30px 32px;
+  justify-content: center;
+  margin-top: 44px;
+}
+
+.orderForm__group {
+  display: flex;
+  gap: 32px;
+}
+
+.orderForm__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.orderForm__input {
+  background-color: var(--extralight-gray);
+  border-radius: 2px;
+  border: 2px solid var(--extralight-gray);
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--black);
+}
+
+.form__error {
+  color: var(--dangerous);
+  text-align: left;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 5px;
+  display: none;
+}
+.orderForm__input::placeholder {
+  opacity: 0;
+}
+input:invalid:not(:placeholder-shown) + .form__error {
+  display: block;
+}
+input:invalid:not(:placeholder-shown) {
+  border-color: var(--dangerous);
+  background-image: url("../../assets/images/errorInput.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px) center;
+}
+
+input[type="text"]:valid:not(:placeholder-shown),
+input[type="tel"]:valid:not(:placeholder-shown) {
+  border-color: var(--mid-gray);
+  background-image: url("../../assets/images/validInput.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px) center;
+}
+
+.orderForm__label {
+  color: var(--dark-gray);
+  left: 16px;
+  line-height: 32px;
+  font-size: 18px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 16px;
+}
+
+.orderForm__input:focus::placeholder {
+  opacity: 1;
+}
+.orderForm__input:focus ~ .orderForm__label,
+.orderForm__input:not(:placeholder-shown) ~ .orderForm__label {
+  transform: translateY(-15px) translateX(0px) scale(0.65);
+}
+
+.orderForm__input:not(:placeholder-shown) ~ .orderForm__label {
+  color: var(--dark-gray);
+}
+
+.orderForm__input:focus ~ .orderForm__label {
+  color: var(--dark-gray);
+}
+
+.orderForm__check-button {
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 20px 0;
+  border: none;
+  border-radius: 4px;
+}
+
+.orderForm__check-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.orderForm__check {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.orderForm__check-input {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #c2c8cd;
+  border-radius: 6px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #f6f8fa;
+  margin-top: -3px;
+}
+
+.orderForm__check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  background-image: url("../../assets/images/check-box-accept.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 1750px) {
+  .orderForm {
+    margin: 80px 60px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .orderForm {
+    margin: 40px 30px;
+  }
+  .orderForm__form {
+    display: grid;
+    grid-template-columns: repeat(2, 360px);
+    gap: 28px 30px;
+    justify-content: center;
+    margin-top: 44px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .orderForm {
+    margin: 56px 20px;
+  }
+  .orderForm__form {
+    grid-template-columns: repeat(2, 352px);
+    gap: 30px 26px;
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .orderForm {
+    margin: 56px 16px;
+  }
+  .orderForm__form {
+    grid-template-columns: 343px;
+    gap: 24px 30px;
+    margin-top: 32px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .orderForm {
+    margin: 56px 20px;
+  }
+  .orderForm__form {
+    grid-template-columns: 300px;
+    gap: 30px 26px;
+    margin-top: 32px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .orderForm {
+    margin: 56px 20px;
+  }
+  .orderForm__form {
+    grid-template-columns: calc(100vw - 32px);
+    gap: 30px 26px;
+    margin-top: 32px;
+  }
+}

@@ -1,0 +1,40 @@
+<section class="review">
+  <h2 class="heading">Отзывы</h2>
+  <div class="carousel">
+    <button (click)="prevSlide()" class="carousel__prev">
+      <img src="assets/images/next.svg" class="carousel__prev-img" />
+    </button>
+    <div class="carousel__slide">
+      <ng-container *ngIf="dataFeedback.length > 0">
+        <div class="review__info" *ngFor="let item of visibleSlides">
+          <div class="review__info-user">
+            <img
+              class="review__info-img"
+              [src]="item.img"
+              alt="{{ item.name }}"
+            />
+            <div class="review__info-text">
+              <p class="review__info-title">{{ item.name }}</p>
+              <p class="review__info-subtitle">{{ item.city }}</p>
+            </div>
+          </div>
+          <p class="review__text">{{ item.review }}</p>
+        </div>
+      </ng-container>
+    </div>
+    <button (click)="nextSlide()" class="carousel__next">
+      <img src="assets/images/next.svg" class="carousel__next-img" />
+    </button>
+  </div>
+
+  <div class="pagination">
+    <span
+      *ngFor="let page of [].constructor(totalComments); let i = index"
+      (click)="currentIndex = i"
+      class="pagination_dots"
+      [class.active]="currentIndex === i"
+    >
+      &#9679;
+    </span>
+  </div>
+</section>

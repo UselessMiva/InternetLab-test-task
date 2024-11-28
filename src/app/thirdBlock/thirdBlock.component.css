@@ -1,0 +1,110 @@
+.thirdBlock {
+  margin: 80px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  position: relative;
+  max-width: 1200px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  color: var(--black);
+}
+
+.thirdBlock__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 592px;
+}
+
+.thirdBlock__title {
+  margin: 0;
+  padding-bottom: 18px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.thirdBlock__description {
+  margin: 0;
+  color: var(--dark-gray);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  padding-bottom: 28px;
+}
+
+.thirdBlock__description:last-of-type {
+  padding-bottom: 0;
+}
+
+.thirdBlock__img {
+  flex-shrink: 0;
+  max-width: 592px;
+  max-width: 100%;
+  height: auto;
+  background-image: url("../../assets/images/truck.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 930px) {
+  .thirdBlock__img {
+    width: 100%;
+    max-width: 400px;
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 768px) {
+  .thirdBlock {
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+  .thirdBlock__info {
+    max-width: 100%;
+    text-align: center;
+  }
+  .thirdBlock__title {
+    font-size: 24px;
+    line-height: 32px;
+    padding-bottom: 15px;
+  }
+  .thirdBlock__description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .thirdBlock__img {
+    width: 100%;
+    max-width: 350px;
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 375px) {
+  .thirdBlock {
+    padding: 0 8px;
+  }
+  .thirdBlock__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .thirdBlock__img {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .thirdBlock {
+    gap: 27px;
+  }
+  .thirdBlock__img {
+    width: 288px;
+    height: 218px;
+  }
+  .thirdBlock__info {
+    max-width: 288px;
+  }
+  .thirdBlock__title {
+    padding-bottom: 27px;
+  }
+}

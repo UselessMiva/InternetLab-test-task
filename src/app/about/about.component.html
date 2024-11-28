@@ -1,0 +1,12 @@
+<section class="about" id="about">
+  <h2 class="heading">Как это работает</h2>
+  <div class="about__content">
+    <div class="about__info" *ngFor="let item of dataAbout">
+      <img src="{{ item.img }}" alt="иконка компонента" class="about__img" />
+      <div class="about__info-text">
+        <h3 class="title">{{ item.title }}</h3>
+        <p class="subtitle">{{ item.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+</section>

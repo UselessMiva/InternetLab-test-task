@@ -1,0 +1,64 @@
+<header>
+  <div class="popup" [class.popup_opened]="isOpen">
+    <div class="popup__container">
+      <div class="popup__logo">
+        <svg
+          width="37"
+          height="24"
+          viewBox="0 0 37 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="25" cy="12" r="12" fill="#ECEFF2" />
+          <circle cx="12" cy="12" r="12" fill="#2A6CEA" />
+        </svg>
+        <p class="popup__logo-text">testLab</p>
+        <button
+          type="button"
+          aria-label="Close"
+          class="popup__buttonClose"
+          (click)="closePopup()"
+        >
+          <img
+            src="assets/images/burger-menu-close-button-part-1.svg"
+            class="popup__buttonClosePart"
+          />
+        </button>
+      </div>
+      <nav class="popup__navigation">
+        <a href="#about" class="popup__link" (click)="closePopup()">
+          <span class="popup__link-text">Как это работает</span>
+          <img
+            src="../../assets/images/burger-menu-nav-button.svg"
+            alt="Навигация"
+            class="popup__link-icon"
+          />
+        </a>
+        <a href="#thirdBlock" class="popup__link" (click)="closePopup()">
+          <span class="popup__link-text">3-й блок</span>
+          <img
+            src="../../assets/images/burger-menu-nav-button.svg"
+            alt="Навигация"
+            class="popup__link-icon"
+          />
+        </a>
+        <a href="#faq" class="popup__link" (click)="closePopup()">
+          <span class="popup__link-text">Вопросы и ответы</span>
+          <img
+            src="../../assets/images/burger-menu-nav-button.svg"
+            alt="Навигация"
+            class="popup__link-icon"
+          />
+        </a>
+        <a href="#orderForm" class="popup__link" (click)="closePopup()">
+          <span class="popup__link-text">Форма</span>
+          <img
+            src="../../assets/images/burger-menu-nav-button.svg"
+            alt="Навигация"
+            class="popup__link-icon"
+          />
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
