@@ -1,11 +1,14 @@
 <section class="faq" id="faq">
   <h2 class="heading">Вопросы и ответы</h2>
   <div class="faq__content">
-    <div class="faq__info" *ngFor="let item of dataFAQ">
-      <details class="details" key="{item.id}">
+    <div class="faq__info" *ngFor="let item of dataFAQ; let i = index">
+      <details class="details" #detail>
         <summary class="details__title-container">
           <p class="details__title">{{ item.title }}</p>
-          <button class="details__button">
+          <button
+            class="details__button"
+            (click)="toggleDetails(detail, $event)"
+          >
             <img src="assets/images/openDropDown.svg" alt="" />
           </button>
         </summary>

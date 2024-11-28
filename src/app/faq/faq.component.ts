@@ -15,4 +15,8 @@ export class FaqComponent implements OnInit {
   ngOnInit(): void {
     this.dataFAQ = this.dataService.getData();
   }
+  toggleDetails(detail: HTMLDetailsElement, event: Event): void {
+    event.preventDefault();
+    detail.open = !detail.open;
+  }
 }

@@ -44,25 +44,24 @@ export class FormBlockComponent {
     event.preventDefault();
     if (this.orderForm.valid) {
       const formData = this.orderForm.value;
-      console.log(formData);
       this.http
         .post('https://jsonplaceholder.typicode.com/posts', formData)
         .subscribe({
           next: (response) => {
             this.snackBar.open('Форма успешно отправлена!', 'Закрыть', {
-              duration: 3000,
+              duration: 1000,
             });
             this.orderForm.reset();
           },
           error: (error) => {
             this.snackBar.open('Ошибка при отправке формы!', 'Закрыть', {
-              duration: 3000,
+              duration: 1000,
             });
           },
         });
     } else {
       this.snackBar.open('Форма заполнена некорректно!', 'Закрыть', {
-        duration: 3000,
+        duration: 1000,
       });
     }
   }
