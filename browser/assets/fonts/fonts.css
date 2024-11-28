@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./GraphikLCG-Semibold.woff") format("woff");
+  src: url("./GraphikLCG-Semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./GraphikLCG-Regular.woff") format("woff");
+  src: url("./GraphikLCG-Regular.woff2") format("woff2");
+}
